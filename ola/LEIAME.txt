@@ -1,0 +1,30 @@
+Este diretório contém os arquivos necessários para o autograder do lab "ola",
+que verifica se um programa em C consegue ser compilado com sucesso e imprime
+uma mensagem de "Olá, mundo!" no terminal.
+
+
+1) Arquivos e diretórios CRIADOS PELO AUTOR:
+--------------------------------------------
+    LEIAME.txt           Este arquivo
+    Makefile             Faz o build do lab a partir de src/
+    autograde-Makefile   Roda o autograder no servidor
+    
+    src/                 Todos os arquivos fonte e soluções
+    test-autograder/     Para teste offline do autograder
+    writeup/             Documentos do lab para os estudantes
+
+
+2) Arquivos e diretórios CRIADOS PELO make:
+-------------------------------------------
+    ola-handout.tar      Arquivo compactado de ola-handout/
+    autograde.tar        Arquivo compactado com o autograder
+
+    ola-handout/         Diretório enviado aos estudantes, a partir de src/
+
+
+3) Arquivos e diretórios CRIADOS pelo Autolab:
+----------------------------------------------
+    ola.rb               Arquivo de configuração
+    ola.yml              Propriedades do banco de dados que persistem de
+                         semestre para semestre
+    log.txt              Log dos envios ao autograder

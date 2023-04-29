@@ -6,6 +6,7 @@ import check50.c
 def exists():
     """O arquivo ola.c existe?"""
     check50.exists("ola.c")
+    print("ok")
 
 
 @check50.check(exists)
@@ -17,16 +18,17 @@ def compiles():
 @check50.check(compiles)
 def uvv():
     """Responde corretamente ao nome UVV?"""
-    check50.run("./ola").stdin("UVV").stdout("UVV").exit()
+    check50.run("./ola").stdin("UVV").stdout("Olá, UVV!").exit()
 
 
 @check50.check(compiles)
 def kevin():
     """Responde corretamente ao nome Kevin?"""
-    check50.run("./ola").stdin("Kevin").stdout("Kevin").exit()
+    check50.run("./ola").stdin("Kevin").stdout("Olá, Kevin!").exit()
 
 
 @check50.check(compiles)
 def abrantes():
     """Responde corretamente ao nome Abrantes?"""
-    check50.run("./ola").stdin("Abrantes").stdout("Abrantes").exit()
+    check50.run("./ola").stdin("Abrantes").stdout("Olá, Abrantes!").exit()
+

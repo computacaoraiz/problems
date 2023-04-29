@@ -1,0 +1,19 @@
+Nome deste lab: ola
+
+Neste lab você escreverá um pequeno programa na linguagem C, chamado de "ola.c",
+que imprimirá no terminal a frase "Olá, mundo!" (exatamente dessa maneira) e
+indicará o sucesso retornando na saída o status 0 (zero).
+
+Verifique o documento "ola.pdf" para maiores informações.
+
+Utilize o arquivo modelo "ola.c" para começar. Não se esqueça de incluir, no
+início do arquivo, seu nome completo, seu número de matrícula e sua turma.
+
+Lembre-se de que, ao enviar qualquer código para ser avaliado, você está
+GARANTINDO QUE FOI VOCÊ QUE FEZ O CÓDIGO, que não houve plágio e que você
+é o único responsável pelo seu programa.
+
+Lembre-se também de que todos os códigos enviados são VERIFICADOS CONTRA
+PLÁGIO DE FORMA AUTOMÁTICA e que os alunos que não seguirem todas as
+normas de integridade acadêmica estão sujeitos à penalidades conforme
+as regras da instutição.
