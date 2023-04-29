@@ -12,6 +12,7 @@ def exists():
 @check50.check(exists)
 def compiles():
     """Verifica se o arquivo ola.c compila:"""
+    check50.c.CFLAGS={'ggdb':True, 'lm':True, 'std':'c17', 'Wall':True, 'Wpedantic':True}
     check50.c.compile("ola.c", exe_name="ola", cc="gcc", max_log_lines=50, lcs50=True)
 
 
