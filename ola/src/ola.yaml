@@ -1,0 +1,26 @@
+- name: "Corretude"
+  checks:
+    - name: "exists"
+      points: 10
+      fail_comment: "FALHOU ( 0/10 pontos): Arquivo ola.c não encontrado."
+      pass_comment: "PASSOU (10/10 pontos): O arquivo existe."
+
+    - name: "compiles"
+      points: 60
+      fail_comment: "FALHOU ( 0/60 pontos): Arquivo não compila."
+      pass_comment: "PASSOU (60/60 pontos): O arquivo foi compilado com sucesso."
+
+    - name: "uvv"
+      points: 10
+      fail_comment: "FALHOU ( 0/10 pontos): O teste com o input UVV falhou."
+      pass_comment: "PASSOU (10/10 pontos): O teste com o input UVV passou."
+
+    - name: "kevin"
+      points: 10
+      fail_comment: "FALHOU ( 0/10 pontos): O teste com o input Kevin falhou."
+      pass_comment: "PASSOU (10/10 pontos): O teste com o input Kevin passou."
+
+    - name: "abrantes"
+      points: 10
+      fail_comment: "FALHOU ( 0/10 pontos): O teste com o input Abrantes falhou."
+      pass_comment: "PASSOU (10/10 pontos): O teste com o input Abrantes passou."
