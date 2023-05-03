@@ -10,7 +10,7 @@
 # Parâmetros, variáveis e comandos:
 
 LAB = $(notdir $(PWD))
-LIMPARCMD=rm -f *~ *.tar
+LIMPARCMD=rm -f *~ *.tar *.tar.gz
 
 
 
