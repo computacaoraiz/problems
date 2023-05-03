@@ -1,4 +1,4 @@
-- name: "Corretude"
+- name: "Compilacao"
   checks:
     - name: "exists"
       points: 10
@@ -10,6 +10,8 @@
       fail_comment: "FALHOU ( 0/60 pontos): Arquivo não compila."
       pass_comment: "PASSOU (60/60 pontos): O arquivo foi compilado com sucesso."
 
+- name: "Corretude"
+  checks:
     - name: "uvv"
       points: 10
       fail_comment: "FALHOU ( 0/10 pontos): O teste com o input UVV falhou."

@@ -6,7 +6,6 @@ import check50.c
 def exists():
     """O arquivo ola.c existe?"""
     check50.exists("ola.c")
-    print("ok")
 
 
 @check50.check(exists)

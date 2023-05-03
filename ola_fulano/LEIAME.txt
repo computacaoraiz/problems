@@ -1,6 +1,8 @@
-Este diretório contém os arquivos necessários para o autograder do lab "ola",
-que verifica se um programa em C consegue ser compilado com sucesso e imprime
-uma mensagem de "Olá, mundo!" no terminal.
+Este diretório contém os arquivos necessários para o autograder do lab
+"ola_fulano", que verifica se um programa em C consegue ser compilado
+com sucesso, pergunta o nome do usuário e imprime a mensagem 
+"Olá, Fulano!" no terminal (onde "Fulano" é o nome que o usuário informou
+como input ao programa).
 
 
 1) Arquivos e diretórios CRIADOS PELO AUTOR:
