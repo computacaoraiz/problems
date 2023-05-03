@@ -1,0 +1,19 @@
+- name: "Compilacao"
+  checks:
+    - name: "existe"
+      points: 20
+      fail_comment: "FALHOU ( 0/20 pontos): Arquivo ola.c não encontrado."
+      pass_comment: "PASSOU (20/20 pontos): O arquivo ola.c existe."
+
+    - name: "compila"
+      points: 30
+      fail_comment: "FALHOU ( 0/30 pontos): Arquivo não compila."
+      pass_comment: "PASSOU (30/30 pontos): O arquivo foi compilado com sucesso."
+
+- name: "Corretude"
+  checks:
+    - name: "resposta"
+      points: 50
+      fail_comment: "FALHOU ( 0/50 pontos): O output não está correto."
+      pass_comment: "PASSOU (50/50 pontos): O output está correto."
+
