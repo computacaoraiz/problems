@@ -1,0 +1,19 @@
+
+RESUMO DE PONTOS POR GRUPO (detalhes abaixo)
+---------------------------------------------
+{%- for part in parts %}
+{{ "%2d" | format(part.points)}} (de {{ "%2s" | format(part.points_possible)}}) para o grupo {{ part.name }}
+{%- endfor %}
+=============================================
+{{ points }} ponto(s) no total
+{% for part in parts %}
+{% if part.comments %}
+GRUPO: {{ part.name }}
+------------------------------
+{%- for c in part.comments %}
+- {{ c | indent(2) -}}
+{% endfor -%}
+{% endif -%}
+{% endfor -%}
+ 
+
