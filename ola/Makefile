@@ -31,11 +31,11 @@ all: handout handout-tarfile autograder-tarfile
 # arquivos devem ficar no diretório alunos/ (isso separa os arquivos que serão
 # entregues aos estudantes dos arquivos que serão apenas do professor).
 handout:
-	(rm -fr $(LAB)-handout; mkdir $(LAB)-handout)
-	cp -p alunos/LEIAME.txt $(LAB)-handout/LEIAME.txt
-	cp -p alunos/LEIAME.txt.pdf $(LAB)-handout/LEIAME.pdf
+	(-rm -fr $(LAB)-handout; mkdir $(LAB)-handout)
+	-cp -p alunos/LEIAME.txt $(LAB)-handout/LEIAME.txt
+	-cp -p alunos/LEIAME.pdf $(LAB)-handout/LEIAME.pdf
 	-cp -p alunos/ola.pdf $(LAB)-handout/ola.pdf
-	cp -p alunos/ola.c $(LAB)-handout/ola.c
+	-cp -p alunos/ola.c $(LAB)-handout/ola.c
 
 # Target handout-tarfile: compacta o diretório de handout em um arquivo tar,
 # que será disponibilizado aos estudantes.
