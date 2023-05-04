@@ -1,0 +1,79 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Modelo para documentação de LABS, PSETS, etc.
+%
+% Por: Abrantes Araújo Silva Filho
+%      abrantesasf@gmail.com
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Classe do documento
+\documentclass[12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Preâmbulo com todas as outras outras chamadas para todos os outros packages
+%%% e o que mais for necessário
+\input{utils/preambulo.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Ajuste do layout, espaçamento de linhas e etc.:
+\geometry{a4paper, portrait, twoside, %left=1.5in, hmarginratio=2:3,
+bindingoffset=0in}
+%\onehalfspacing
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Configurações para as propriedades do PDF:
+\hypersetup{
+   hidelinks,           % Comente para web, descomente para impressão
+   colorlinks=true,    % True para web, False para impressão
+   pdftitle={Lab: Olá, mundo!},
+   pdfauthor={Abrantes Araújo Silva Filho},
+   pdfsubject={Fundamentos da computação; linguagem C.},
+   pdfkeywords={c, compilação, gcc},
+   pdfinfo={
+      CreationDate={}, % Ex.: D:AAAAMMDDHH24MISS
+      ModDate={}       % Ex.: D:AAAAMMDDHH24MISS
+   }
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Compilação condicional de capítulos
+%\includeonly{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Começa o documento
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Front matter
+\pdfbookmark[1]{LAB: ``Olá, mundo!''}{titulo}
+\title{\textbf{LAB: ``Olá, mundo!''}}
+\author{Abrantes Araújo Silva Filho}
+\date{Revisão: 2023-05-04}
+\maketitle
+\renewcommand{\abstractname}{\textbf{Resumo}}
+\abstract{\noindent Este é um simples LAB de programação em C para verificar se
+o seu ambiente está configurado e se você consegue programar, compilar e
+executar com sucesso o canônico ``Olá, mundo!'' (o famoso \ingles{Hello,
+world!}).}
+\pdfbookmark[1]{Sumário}{sumario}
+\tableofcontents
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Main matter
+%\newpage
+\input{main/texto}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Apêndices
+%\newpage
+%\appendix
+%\input{apend/xxxx}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Back matter
+\bibliography{utils/biblioteca}
+%\printindex
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Termina o documento
+\end{document}
