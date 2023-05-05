@@ -1,0 +1,41 @@
+# ******************************************************************************
+# autograder-Makefile para o lab "ola", em C, cujo objetivo é imprimir um
+# simples "Olá, mundo!" no terminal, e sair com status 0 (zero).
+#
+# Por: Abrantes Araújo Silva Filho
+
+
+
+# ******************************************************************************
+# Parâmetros, variáveis e comandos:
+
+CHECKDIR=check50/
+CHECKOUT=oja.json
+GRADESCHEME=grade50/ola.yaml
+GRADETEMPLATE=grade50/compraiz.jinja2
+GRADEOUT=-o autojson
+CHECKOPT=-o json --output-file $(CHECKOUT)
+
+
+
+# ******************************************************************************
+# Target padrão: compila todos os targets principais, exceto os de limpeza
+
+all: check grade
+
+
+
+# ******************************************************************************
+# Targets principais
+
+# Target check: verifica o código enviado pelo aluno através do CHECK50 e gera
+# um arquivo JSON que será utililzado pelo GRADELAB50.
+check:
+	-check50 --dev "check50/" -o json --output-file ola.json
+
+# Target grade: calcula a pontuação do aluno baseando-se no JSON gerado pelo
+# CHECK50 do target anterior.
+grade:
+	-gradelab50 "grade50/ola.yaml" "ola.json" --template "grade50/compraiz.jinja2"
+	-gradelab50 "grade50/ola.yaml" "ola.json" -o autojson
+

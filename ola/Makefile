@@ -34,7 +34,7 @@ handout:
 	(-rm -fr $(LAB)-handout; mkdir $(LAB)-handout)
 	-cp -p alunos/LEIAME.txt $(LAB)-handout/LEIAME.txt
 	-cp -p alunos/LEIAME.pdf $(LAB)-handout/LEIAME.pdf
-	-cp -p alunos/ola.pdf $(LAB)-handout/ola.pdf
+	-cp -p alunos/latex/ola.pdf $(LAB)-handout/ola.pdf
 	-cp -p alunos/ola.c $(LAB)-handout/ola.c
 
 # Target handout-tarfile: compacta o diretório de handout em um arquivo tar,
@@ -49,8 +49,9 @@ handout-tarfile: handout
 # realizados pelo check50 e a pontuação a ser considerada pelo grade50.
 # A Makefile do autograder deve ficar na raiz do diretório "autograder".
 autograder-tarfile: $(shell find autograder)
-	tar cvf autograder.tar autograder
-
+	(cd autograder; tar cvf autograde.tar check50 grade50)
+	-cp autograder/autograde.tar .
+	-cp autograder/autograde-Makefile .
 
 
 # ******************************************************************************
@@ -69,6 +70,7 @@ limpar:
 	(cd autograder/check50; $(LIMPARCMD))
 	(cd autograder/grade50; $(LIMPARCMD))
 	rm -fr $(LAB)-handout
+	rm -fr autograde-Makefile
 
 # Target apagartudo: APAGA TODOS OS REGISTROS DOS ESTUDANTES do arquivo
 # de log e do diretório handin/. CUIDADO, NUNCA RODE ESTE TARGET DEPOIS QUE
