@@ -1,1 +1,4 @@
-check50: true
+check50:
+  files: &check50_files
+    - !exclude "*"
+    - !require "ola.c"
